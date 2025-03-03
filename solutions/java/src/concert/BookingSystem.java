@@ -1,21 +1,23 @@
 package concert;
 
 import java.time.LocalDateTime;
+import java.util.ConcurrentModificationException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 public class BookingSystem {
 
     private final HashMap<String, Concert> concerts;
-    private final HashMap<String, Booking> bookings;
+    private final ConcurrentHashMap<String, Booking> bookings;
     private final Object lock = new Object();
     private NotificationFactory notificationFactory;
 
     private BookingSystem(NotificationFactory notificationFactory) {
         this.concerts = new HashMap<>();
-        this.bookings = new HashMap<>();
+        this.bookings = new ConcurrentHashMap<>();
         this.notificationFactory = notificationFactory;
     }
 
