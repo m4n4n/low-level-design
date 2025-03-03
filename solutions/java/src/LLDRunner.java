@@ -28,6 +28,7 @@ import socialnetworkingservice.SocialNetworkingServiceDemo;
 import splitwise.SplitwiseDemo;
 import stackoverflow.StackOverflowDemo;
 import taskmanagementsystem.TaskManagementSystemDemo;
+import test.TestDemo;
 import tictactoe.TicTacToeDemo;
 import trafficsignalsystem.TrafficSignalSystemDemo;
 import vendingmachine.VendingMachineDemo;
@@ -69,5 +70,6 @@ public class LLDRunner {
 //        TicTacToeDemo.run();
 //        TrafficSignalSystemDemo.run();
 //        VendingMachineDemo.run();
+        TestDemo.run();
     }
 }
